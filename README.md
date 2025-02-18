@@ -1,52 +1,75 @@
 💡 [STATUS] planning
 
 
-📝 Jira Text Converter - Tampermonkey Script
-Right-click, Convert, and Paste Seamlessly into Jira!
+# Jira Content Converter Tampermonkey Script 🚀
 
-🚀 Key Features
+Transform web content into Jira-ready text with AI-powered formatting! This script lets you seamlessly convert HTML elements (tables, images, text) into Jira-compatible markup while automating image hosting and content optimization.
 
-Right-Click Conversion: Simply right-click any HTML element (tables, sections, images) on a webpage and select "Convert to Jira Text" from the context menu.
+---
 
-Clean Formatting: Instantly transforms tables into Jira-compatible markdown format. No more manual adjustments!
+## ✨ **Key Features**
+- **Right-Click to Jira Magic**  
+  Simply right-click any webpage element → select "Convert to Jira Text" → get instant formatted content.
+- **Durable Image Links**  
+  Auto-uploads images from Confluence/other sources to **your WebDAV server** to prevent broken links.
+- **AI-Powered Cleanup**  
+  Uses OpenAI to refine content structure for clarity in Jira descriptions.
+- **One-Click Modal Preview**  
+  Preview, copy, and paste results directly into Jira issues.
 
-Image Links: Converts images to text links in Jira format (!http://image-url.jpg!), perfect for descriptions or comments.
+---
 
-Modal Preview: A popup shows your formatted text—copy it with one click and paste directly into Jira.
+## 🛠️ **Quick Start**
 
-✨ Why You’ll Love This
+### **Installation**
+1. Install [Tampermonkey](https://www.tampermonkey.net/) (Browser extension).
+2. [Click here to install the script](#) *(add your script URL here)*.
 
-Save Time: Skip tedious manual reformatting.
+### **First-Time Setup**
+1. **Configure Settings** (*Tampermonkey → Dashboard → Script Settings*):
+   - OpenAI API Key + Base URL
+   - WebDAV Credentials (URL, username, password)
+2. **Right-click any content** → Try "Convert to Jira Text"!
 
-Intuitive: No complex settings—just right-click and go.
+---
 
-Works Everywhere: Compatible with most HTML pages (wikis, dashboards, reports).
+## 🖱️ **How to Use**
+1. **Right-click** a webpage element (e.g., a table, div, or image container).
+2. Select **"Convert to Jira Text"** from the context menu.
+3. **Preview & Copy** the formatted output from the modal window.
+4. **Paste directly into Jira** 🎉
 
-🔧 Installation
+![Demo GIF](#) *(add a short demo GIF/video link here if available)*
 
-Ensure you have Tampermonkey installed.
+---
 
-Install the script (link to your script here).
+## 🔧 **Customization**
+Tweak the script via Tampermonkey settings:
+```javascript
+// Example settings (edit in Tampermonkey dashboard)
+const USER_CONFIG = {
+  OPENAI: {
+    API_KEY: "your-api-key",
+    BASE_URL: "https://api.openai.com/v1",
+    MODEL: "gpt-4-turbo"
+  },
+  WEBDAV: {
+    URL: "https://your-webdav-server.com",
+    USERNAME: "user123",
+    PASSWORD: "securePassword!"
+  }
+};
+```
 
-Start converting! Right-click any element on a page and select the option.
+⚙️ Dependencies
+WebDAV Server: Host images permanently (e.g., Nextcloud, OwnCloud).
 
-🖱️ How to Use
+OpenAI API Account (any compatible): For content structuring (billed per usage).
 
-Navigate to a webpage with tables/images.
+❓ Support
+Issues? Check the browser console (F12) for errors.
 
-Right-click the element you want to convert.
+Feature Requests? Open an issue here.
 
-Choose "Convert to Jira Text" from the context menu.
-
-Copy the formatted text from the modal and paste it into Jira!
-
-⚠️ Note
-
-First-time use may trigger a brief permissions alert (required for clipboard access).
-
-For complex nested tables, ensure you select the outermost container.
-
-🌟 Ready to Streamline Your Jira Workflow?
-Try it now—right-click something and see the magic! 💻✨
-
-Feedback? Let us know how to improve!
+Happy Jira-ing! ✍️
+Convert fearlessly, with fewer broken links and more coffee breaks. ☕
